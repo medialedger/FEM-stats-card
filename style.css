@@ -44,6 +44,9 @@ article {
 article picture {
 	display: block;
 }
+article img {
+	aspect-ratio: 654/480;
+}
 article .cnt-box {
 	padding: 2em;
 }
@@ -93,6 +96,9 @@ article ul li small {
 	article picture {
 		order: 2;
 		width: 48.6%;
+	}
+	article img {
+		aspect-ratio: 1080/892;
 	}
 	article .cnt-box {
 		order: 1;
