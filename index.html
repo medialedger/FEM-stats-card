@@ -5,13 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Stats preview card component from Front End Mentor">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<title>Stats preview card component</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
 <body>
 	<article>
@@ -28,6 +22,131 @@
 				<li>12M+ <small>queries</small></li>
 			</ul>
 		</div>
-	</article>	
+	</article>
+	<style>
+		:root {
+			--color-bg-main: hsl(233, 47%, 7%);
+			--color-bg-card: hsl(244, 38%, 16%);
+			--color-accent: hsl(277, 64%, 61%);
+			--color-white: hsl(0, 0%, 100%);
+			--color-white-trans-slight: hsla(0, 0%, 100%, 0.75);
+			--color-white-trans-more: hsla(0, 0%, 100%, 0.6);
+			--font-family-inter: 'Inter', sans-serif;
+			--font-family-lexend: 'Lexend Deca', sans-serif;
+		}
+		html {
+			font-family: var(--font-family-inter);
+			background-color: var(--color-bg-main);
+			color: var(--color-white);
+			box-sizing: border-box;
+		}
+		*,
+		*:before,
+		*:after {
+			box-sizing: inherit;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		article {
+			width: 90%;
+			max-width: 21em;
+			text-align: center;
+			background-color: var(--color-bg-card);
+			border-radius: .5em;
+			overflow: hidden;
+			margin: 1em auto;
+		}
+		article picture {
+			display: block;
+		}
+		article img {
+			aspect-ratio: 654/480;
+		}
+		article .cnt-box {
+			padding: 2em;
+		}
+		article h2 {
+			font-size: 1.75em;
+			line-height: 1.2;
+			margin: 0;
+		}
+		article h2 b {
+			color: var(--color-accent);
+		}
+		article p {
+			font-size: .9375em;
+			line-height: 1.7;
+			margin: 1em 0;
+			opacity: .75;
+		}
+		article ul {
+			margin: 2em 0 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+		}
+		article ul li {
+			font-size: 1.5em;
+			font-weight: 700;
+		}
+		article ul li small {
+			display: block;
+			font-size: .5em;
+			font-weight: normal;
+			font-family: var(--font-family-lexend);
+			text-transform: uppercase;
+			letter-spacing: .08em;
+			margin-top: .5em;
+			opacity: .6;
+		}
+		@media screen and (min-width: 75em) {
+			article {
+				max-width: 69.375em;
+				text-align: left;
+				display: flex;
+				align-items: center;
+			}
+			article picture {
+				order: 2;
+				width: 48.6%;
+			}
+			article img {
+				aspect-ratio: 1080/892;
+			}
+			article .cnt-box {
+				order: 1;
+				padding: 4.5em;
+				width: 51.4%;
+			}
+			article h2 {
+				font-size: 2em;
+				max-width: 11em;
+			}
+			article p {
+				max-width: 24em;
+			}
+			article ul {
+				flex-direction: row;
+			}
+		}
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 </body>
 </html>
